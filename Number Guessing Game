@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+import java.util.Random;
+public class Main {
+    public static void main(String[] args) {
+
+        Random ram = new Random();
+        int RandomNumber = ram.nextInt(100) + 1;
+        int tryCount=0;
+        while(true){
+        System.out.print("Guess Any Number From 1 To 100: ");
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        tryCount++;
+            if (RandomNumber == N) {
+                System.out.println("Congrats You Have Guessed The Correct Number:");
+                System.out.println("It took You "+tryCount+" tries");
+                break;
+
+            } else if (RandomNumber > N) {
+
+
+                System.out.println("the random number is slightly higher.Guess Again!");
+            } else if (RandomNumber < N) {
+
+
+                System.out.println("the random number is slightly lower.Guess Again! ");
+            } else {
+                System.out.println("please enter a valid number.");
+            }
+        }
+    }
+}
