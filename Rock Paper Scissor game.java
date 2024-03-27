@@ -21,7 +21,7 @@ class Gaming {
 
         System.out.println("Computer played: " + computer);
 
-        if (player==computer) {
+        if (player.equalsIgnoreCase(computer)) {
             System.out.println("The game is a tie");
         } else if (player.equalsIgnoreCase("rock")) {
             if (computer.equalsIgnoreCase("paper")) {
